@@ -1,0 +1,150 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Insertar producto
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label>Categorias</ion-label>
+        <ion-select placeholder="Elige una" [(ngModel)]="option">
+            <ion-select-option value="T">Tecnologia</ion-select-option>
+            <ion-select-option value="H">Hogar</ion-select-option>
+            <ion-select-option value="I">Inmobiliaria</ion-select-option>
+            <ion-select-option value="M">Motor</ion-select-option>
+        </ion-select>
+    </ion-item>
+
+    <div *ngIf="option == 'T'">
+        <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Descripcion</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="fixed">Categoria:</ion-label>
+            <ion-input value="Tecnologia" disabled></ion-input>
+        </ion-item>
+
+
+
+        <ion-item>
+            <ion-label>Estado del producto</ion-label>
+            <ion-select>
+                <ion-select-option value="Perfecto estado" [(ngModel)]="descripcion">Perfecto estado</ion-select-option>
+                <ion-select-option value="Usado" [(ngModel)]="descripcion">Usado</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Precio</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+    </div>
+
+    <div *ngIf="option == 'H'">
+        <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Descripcion</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="fixed">Categoria:</ion-label>
+            <ion-input value="Hogar" disabled></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Precio</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+    </div>
+
+
+    <div *ngIf="option == 'I'">
+        <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Descripcion</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Localidad</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="fixed">Categoria:</ion-label>
+            <ion-input value="Inmobiliaria" disabled></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Estado del producto</ion-label>
+            <ion-select>
+                <ion-select-option value="T">Perfecto estado</ion-select-option>
+                <ion-select-option value="H">Usado</ion-select-option>
+            </ion-select>
+        </ion-item>
+    </div>
+
+    <div *ngIf="option == 'M'">
+        <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Descripcion</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="fixed">Categoria:</ion-label>
+            <ion-input value="Motor" disabled></ion-input>
+        </ion-item>
+
+
+        <ion-item>
+            <ion-label>Estado del producto</ion-label>
+            <ion-select>
+                <ion-select-option value="T">Coche</ion-select-option>
+                <ion-select-option value="H">Moto</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+
+
+        <ion-item>
+            <ion-label position="floating">Km</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Año</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+
+
+        <ion-item>
+            <ion-label position="floating">Precio</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+    </div>
+
+
+</ion-content>
