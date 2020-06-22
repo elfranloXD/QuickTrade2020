@@ -3,11 +3,11 @@ import { IProducto, IPMotor, IPInmobiliaria, IPTecnologia } from '../interfaces'
 import { ToastController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+    selector: 'app-insert-product',
+    templateUrl: './insert-product.page.html',
+    styleUrls: ['./insert-product.page.scss'],
 })
-export class HomePage {
+export class InsertProductPage {
 
     //Atributos generales
     nombre: string;
@@ -48,14 +48,18 @@ export class HomePage {
     ]
 
     constructor(private _toastCtrl: ToastController) { }
-        async presentToast() {
-            const toast = await this._toastCtrl.create({
-                message: 'Se ha insertado correctamente',
-                duration: 1000,
-                position: 'bottom'
-            });
-            toast.present();
-        }
+    async presentToast() {
+        const toast = await this._toastCtrl.create({
+            message: 'Se ha insertado correctamente',
+            duration: 1000,
+            position: 'bottom',
+        });
+        toast.present();
+    }
+
+    ngOnInit() {
+        console.log("Bienvenido a la APP")
+    }
 
     insertar() {
         if (this.categoria == 'Hogar') {

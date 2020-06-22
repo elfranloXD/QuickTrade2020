@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>DETALLES</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label>{{'Nombre: ' + nombre}}</ion-label>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>{{'Descripcion: ' + descripcion}}</ion-label>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>{{'Precio: ' + precio}}</ion-label>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>{{'Categoria: ' + categoria}}</ion-label>
+    </ion-item>
+
+    <div *ngIf="categoria == 'Tecnologia'">
+        <ion-item>
+            <ion-label>{{'Estado del producto: ' + estadoProducto}}</ion-label>
+        </ion-item>
+    </div>
+
+    <div *ngIf="categoria == 'Inmobiliaria'">
+        <ion-item>
+            <ion-label>{{'Localidad: ' + localidad}}</ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>{{Número de habitaciones}}</ion-label>
+        </ion-item>
+    </div>
+
+    <div *ngIf="categoria == 'Motor'">
+        <ion-item>
+            <ion-label>{{'Coche o Moto?: ' + cocheMoto}}</ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>{{'Numero de KM: ' + nKm}}</ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">{{'Anyo: ' + anyo}}</ion-label>
+        </ion-item>
+    </div>
+</ion-content>

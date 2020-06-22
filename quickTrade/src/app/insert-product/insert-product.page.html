@@ -9,7 +9,7 @@
 <ion-content>
     <ion-item>
         <ion-label position="floating">Nombre</ion-label>
-        <ion-input [(ngModel)] ="nombre"></ion-input>
+        <ion-input [(ngModel)]="nombre"></ion-input>
     </ion-item>
 
     <ion-item>
@@ -75,15 +75,6 @@
         </ion-item>
     </div>
 
-    <ion-button expand="block" (click)="insertar()">Insertar</ion-button>
-    
-    <ion-card *ngFor= "let item of productos">
-        <ion-card-header>
-            <ion-card-title>{{item.nombre}} - ({{item.precio}}€)</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-            {{item.descripcion}}
-        </ion-card-content>
-    </ion-card>
+    <ion-button expand="block" (click)="insertar()" color="medium">Insertar</ion-button>
 
 </ion-content>
